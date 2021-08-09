@@ -7,6 +7,8 @@ const today = new Date();
   const second = today.getSeconds();
   let prepand = (hour >= 12)? " PM ":" AM ";
   hour = (hour >= 12)? hour - 12: hour;
+
+  
   if (hour===0 && prepand===' PM ') 
   { 
   if (minute===0 && second===0)
