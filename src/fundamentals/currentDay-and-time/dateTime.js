@@ -9,9 +9,11 @@ const today = new Date();
   hour = (hour >= 12)? hour - 12: hour;
 
 
-
+//Ternary operator 
 //if((hour === 0 && prepand === 'PM') && (minute===0 && second===0) ? (hour = 12, prepand = 'Noon') : (hour = 12, prepand = 'PM') )
   
+
+// Normal if else 
   if (hour===0 && prepand===' PM ') 
   { 
   if (minute===0 && second===0)
@@ -42,3 +44,14 @@ const today = new Date();
 console.log(`Current Time : ${hour}${prepand} : ${minute} : ${second}`);
 
 
+
+
+
+
+
+
+
+
+
+
+//if((hour === 0 && prepand === 'PM') && (minute===0 && second===0) ? (hour = 12, prepand = 'Noon') : (hour = 12, prepand = 'PM') )
