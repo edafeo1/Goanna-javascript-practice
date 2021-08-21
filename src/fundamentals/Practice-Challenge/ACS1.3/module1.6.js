@@ -149,6 +149,9 @@ function frames(num_Of_frames, time_in_mins) {
 
 console.log(frames(10,1));
 
+
+
+
 /*
 Q6. Two Makes Ten
 Create a function that takes two arguments. Both arguments are integers, a and b. Return true if one of them is 10 or if their sum is 10.
@@ -161,18 +164,33 @@ makesTen(9, 9) ➞ false
 makesTen(1, 9) ➞ true
 
 CODE
-function greeting(name) {
+function makesTen(n1, n2) {
 
 }
 */
 
+//let makeTen=(a,b)=>  (a == 10 || b == 10 || a + b == 10)     ?     true     :      false
 
 
+function makesTen(a, b) {
+    
+    if(a == 10 || b == 10 || a + b == 10 ){
+        return true;
+    }
+    return false
+    
+
+    //return (a == 10 || b == 10 || a + b == 10) ? true : false;
+}
+
+
+console.log(makesTen(1,9));
 
 
 /*
 Q7. Compare Strings by Count of Characters
-Create a function that takes two strings as arguments and return either true or false depending on whether the total number of characters in the first string is equal to the total number of characters in the second string.
+Create a function that takes two strings as arguments and return either true or false 
+depending on whether the total number of characters in the first string is equal to the total number of characters in the second string.
 
 Examples
 comp("AB", "CD") ➞ true
@@ -182,20 +200,22 @@ comp("ABC", "DE") ➞ false
 comp("hello", "edabit") ➞ false
 
 CODE
-function printArray(number) {
+function stringCount(str1, str2) {
  
 }
 */
 
+function stringCount(str1, str2) {
+    if(str1.length == str2.length){
+        return true;
+    }
+    return false;
+
+    return (str1.length == str2.length) ? true : false;
+}
 
 
-
-
-
-
-
-
-
+console.log(stringCount("HaHaHa", "hahaha"));
 
 
 /*
@@ -216,6 +236,8 @@ function pow(x,n){
 }
 */
 
+
+const pow=(x,n)=> (x**n)
 
 
 
@@ -245,7 +267,25 @@ function matchHouses(step) {
 }
 */
 
+const matchHouses = (step) =>   step > 0      ?      (step * 5 + 1)        :      "This should be more than 0 please :)"
 
+function matchHouse(step){
+    if(step > 0){
+        return (step * 5 + 1);
+    }
+
+    return "This should be more than 0 please :)"
+}
+
+
+
+
+let obj ={
+    name: "hello",
+    "HUGO": 2
+}
+
+let name = obj.name;
 
 
 
