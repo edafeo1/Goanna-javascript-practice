@@ -21,7 +21,7 @@ return avg;
 var result = averageMarks(students);
 
 if(result > 60 ? result > 70 ? result > 80 ? result > 90 ? 
-        console.log("A") : console.log("B") : console.log("C") : console.log("D") : console.log("F"));
+         console.log("A") : console.log("B") : console.log("C") : console.log("D") : console.log("F"));
 
 
 /*
