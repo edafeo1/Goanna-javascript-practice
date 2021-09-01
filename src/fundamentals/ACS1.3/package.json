@@ -1,0 +1,16 @@
+{
+  "name": "acs1.3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "javascriptArrays.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.1.0"
+  }
+}
