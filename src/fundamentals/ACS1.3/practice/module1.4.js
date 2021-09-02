@@ -2,17 +2,8 @@
 Q1. Buggy Code (Part 1)
 Fix the code in the code tab to pass this challenge (only syntax errors). 
 
-cubes(3) ➞ 27
-
-cubes(5) ➞ 125
-
-cubes(10) ➞ 1000
-
-CODE
-function cubes(a) {
-	
-}
 */
+
 let a = 3;
 
 
@@ -23,10 +14,6 @@ function cubes(a) {
 }
 
 
-
-let result = cubes(a);
-
-//console.log("Question 1 Result: " + result);
 
 /*
 Q2. Basic Variable Assignment
@@ -46,21 +33,12 @@ function nameString(name){
     return result;
 }
 
-//console.log("Question 2 Result: " + nameString("Jordan"));
-
-
 /*
 Q3. Correct the Mistakes
 
 Fix the code in the code tab to pass this challenge (only syntax errors). 
 Look at the examples below to get an idea of what the function should do.
 
-Examples
-squared(5) ➞ 25
-
-squared(9) ➞ 81
-
-squared(100) ➞ 10000
 
 CODE
 function squaed(b) {
@@ -77,8 +55,35 @@ return b * b;
 
 }
 
-//console.log("Question 3 Result: " + squaed(5));
+/*
+Q4. Return the Last Element in an Array
+Create a function that takes an array containing only numbers and return the Last element.
 
+CODE
+function getLastValue(arr) {
+	
+}
+*/
+
+function getLastValue(arr) {
+	return arr[arr.length - 1];
+}
+
+
+/*
+Q4. Return the Sum of an Array
+Create a function that takes an array containing only numbers and return the sum of the array.
+
+CODE
+function getFirstValue(arr) {
+	
+}
+*/
+
+
+function sumArray(arr) {
+	return sum = arr.reduce((a, b) => a + b, 0);
+}
 
 /*
 Q4. Return the First Element in an Array
@@ -90,22 +95,11 @@ function getFirstValue(arr) {
 }
 */
 
-function getLastValue(arr) {
-	return arr[arr.length - 1];
-}
 
 function getFirstValue(arr) {
     return arr[0];
 	
 }
-let array = [10, 15, 12, 3];
-
-//console.log("Question 4 Result: " + getFirstValue(array));
-
-// Inside of function... always work with the parameters
-
-// Outside of function, ALWAYS PASS YOUR PARAMETER
-
 
 
 /*
@@ -118,13 +112,10 @@ function calcAge(age) {
 }
 */
 
-let userAge = 30; 
 
 function calcAge(age) {
 	return age * 365;
 }
-
-//console.log("Question 5 Result is: " + calcAge(userAge));
 
 
 /*
@@ -140,18 +131,12 @@ function makePair(num1, num2) {
 }
 */
 
-// Arguments
-// Parameter 
 
 
 function makePair(num1, num2) {
 	return [num1, num2];
     //return [...arguments];
 }
-
-//console.log(makePair(1,2));
-
-
 
 /*
 Q7. Upvotes vs Downvotes
@@ -176,14 +161,8 @@ function getVoteCount(parr) {
 	return parr.upvotes - parr.downvotes;
 }
 
-//console.log("Question & Result is: " + getVoteCount(votes));
 
-
-
-
-
-
-
+module.exports = { cubes, makePair, calcAge, getFirstValue, getLastValue, sumArray, squared, nameString };
 
 
 
@@ -225,4 +204,3 @@ function pow(x,n){
 */
 
 
-module.exports = { cubes };
