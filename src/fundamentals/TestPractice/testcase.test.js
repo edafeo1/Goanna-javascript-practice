@@ -11,6 +11,7 @@ const { cubes, makePair, calcAge, getFirstValue, getLastValue, sumArray, squared
     let array;
     let ageVal;
 
+    
     beforeAll(() => {
       array = [10, 15, 12, 3];
       first_val = 10;
@@ -20,7 +21,7 @@ const { cubes, makePair, calcAge, getFirstValue, getLastValue, sumArray, squared
       nameString = "fegoedabit";
       ageVal = 18 * 365;
     });
-    
+
     test('testing the describe test block', () => {
       expect(1).toBe(1);
     });
