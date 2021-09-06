@@ -1,6 +1,10 @@
 //import reader from "readline-sync";
 //import PromptSync from 'prompt-sync';
-const prompt = require('prompt-sync')()
+//const prompt = require('prompt-sync')()
+import fs from 'fs'
+import promptSync from 'prompt-sync';
+import fetch from "node-fetch";
+const prompt = promptSync();
 
 
 //Musician Function
@@ -162,6 +166,17 @@ function main(){
     }
 
 
+    this.deployCost = (troupName, hours) =>{
+        var troup = '';
+        for (let i = 0; i < troupList.length; i++){
+            troupList[i].getName() == troupName ? troup = troupList[i] : troup = 0;
+        }
+        
+        console.log(`The cost to deploy ${troup.getName()} is: \n`);
+        troup.deployCost(hours);
+    }
+
+
     this.troupSummary = () =>{
         for(let i = 0; i < troupList.length; i++){
             console.log(`${troupList[i].troupDetail()}\n`);
@@ -176,7 +191,14 @@ function main(){
 
 
 
-
+function readNames(){
+    fetch('/test.txt')
+    .then(response => response.text())
+    .then(data => {
+        // Do something with your data
+        console.log(data);
+    });
+}
 
 
 
@@ -218,8 +240,9 @@ var ma = new main();
 ma.createMusician();
 ma.createTroup();
 ma.addToTroup('john', 'First');
-console.log('Troup Detaiulos liosted below: \n')
+console.log('Troup Details listed below: \n');
 ma.troupSummary();
+console.log(readNames());
 
 
 /*
