@@ -162,7 +162,42 @@ function getVoteCount(parr) {
 }
 
 
-module.exports = { cubes, makePair, calcAge, getFirstValue, getLastValue, sumArray, squared, nameString };
+function Musician(name, yearsPlaying, hourlyRate){
+
+	var musicianType = '';
+	
+	this.getArtistName = () => {
+		return name;
+	}
+	
+	this.getHourlyRate = () => {
+		return hourlyRate;
+	}
+	
+	this.musSummary = () =>{
+		return `My name is ${name}, and I play the ${musicianType}\n `;
+	}
+	
+	//musician details
+	this.musDetail = () =>{
+		return `Hello my name is ${name}.\n
+				I have been playing for ${yearsPlaying},\n
+				My Hourly rate is ${hourlyRate},\n
+				I also am a ${musicianType}\n`
+	}
+	
+	//Setting the musician type i.e guitarist, basist etc..
+	this.setMusicianType = (type) =>{
+		musicianType = typeof(type) == 'string' ? type : 'Instrumentalist';
+	}
+	
+	
+	
+	}
+
+
+
+module.exports = { cubes, makePair, calcAge, getFirstValue, getLastValue, sumArray, squared, nameString, Musician };
 
 
 

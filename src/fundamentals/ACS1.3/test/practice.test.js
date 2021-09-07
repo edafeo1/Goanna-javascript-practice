@@ -1,10 +1,13 @@
 const { cubes } = require('../practice/module1.4')
+const { Musician } = require('../practice/module1.4')
 
-const add = (a, b) => a + b;
+var M = new Musician('john', 10, 25);
 
-test('2 + 3 = 5', () => {
-    expect(add(2, 3)).toBe(5);
+test('Get artist name', () => {
+    expect(M.getArtistName()).toBe("john");
   });
+
+
 
 
   test('3 ** 3 = 27', () => {

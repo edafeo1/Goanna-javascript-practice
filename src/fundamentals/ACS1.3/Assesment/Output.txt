@@ -4,8 +4,8 @@
 
             Hello my name is john.
 
-            I have been playing for g,
+            I have been playing for 5,
 
-            My Hourly rate is f,
+            My Hourly rate is 6,
 
-            I also am a f
+            I also am a Guitarist

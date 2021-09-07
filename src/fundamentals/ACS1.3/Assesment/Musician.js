@@ -1,15 +1,13 @@
-
-import fs from 'fs'
-import promptSync from 'prompt-sync';
-const prompt = promptSync();
+const fs = require('fs')
+const prompt = require('prompt-sync')();
 
 
 //Musician Function
 function Musician(name, yearsPlaying, hourlyRate){
 
-var musicianType = ''
+var musicianType = '';
 
-this.getName = () => {
+this.getArtistName = () => {
     return name;
 }
 
@@ -28,11 +26,11 @@ this.musDetail = () =>{
             My Hourly rate is ${hourlyRate},\n
             I also am a ${musicianType}\n`
 }
+
 //Setting the musician type i.e guitarist, basist etc..
 this.setMusicianType = (type) =>{
     musicianType = typeof(type) == 'string' ? type : 'Instrumentalist';
 }
-
 
 
 
@@ -47,15 +45,16 @@ function Troup(name, minDuration){
     var genre = '';
     let errMsg = 'This is not allowed \nYou must enter either: rock, pop or bass\n';
 
-    this.getName = () => {
+    this.getTroupName = () => {
         return name;
     }
 
     this.addMusician = (Musician) => {
         artistList.push(Musician);
      }
+
     
-     this.deployCost = (hours) => {
+    this.deployCost = (hours) => {
          let cost = 0;
         for (let i = 0; i < artistList.length; i++){
             cost += hours * artistList[i].getHourlyRate();
@@ -155,14 +154,15 @@ function Stage(){
     this.addToTroup = (musName, troupName) =>{
         let musician = '';
         var troup = '';
+      
         for (let i = 0; i < troupList.length; i++){
-            troupList[i].getName() == troupName ? troup = troupList[i] : troup = 0;
-            artistList[i].getName() == musName ? musician = artistList[i] : musician = 0;   
+            troupList[i].getTroupName() == troupName ? troup = troupList[i] : troup = 0;
+            artistList[i].getArtistName() == musName ? musician = artistList[i] : musician = 0;   
         }
 
-        console.log(`Adding ${troup.getName()} to ${musician.getName()}\n`)
+        console.log(`Adding ${troup.getTroupName()} to ${musician.getArtistName()}\n`)
         troup.addMusician(musician);
-        console.log(`Succesfully added ${musician.getName()} to ${troup.getName()} \n`)
+        console.log(`Succesfully added ${musician.getArtistName()} to ${troup.getTroupName()} \n`)
         //troupList.addMusician(musician);
     }
 
@@ -246,8 +246,8 @@ ma.troupSummary();
 ma.logFileText();
 ma.writeToFile();
 
-
 /*
+
 get_selection = () => {
     const options = ['Please select your favourite from the following options:', '1. Pizza', '2. Ice cream', '3. Salad'].join('\n')
     const selection = prompt(options+'\n')
@@ -257,3 +257,6 @@ get_selection = () => {
 
 get_selection();
 */
+
+
+module.exports = { Musician }
