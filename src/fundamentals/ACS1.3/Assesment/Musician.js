@@ -1,9 +1,6 @@
-//import reader from "readline-sync";
-//import PromptSync from 'prompt-sync';
-//const prompt = require('prompt-sync')()
+
 import fs from 'fs'
 import promptSync from 'prompt-sync';
-import fetch from "node-fetch";
 const prompt = promptSync();
 
 
@@ -83,10 +80,10 @@ function Troup(name, minDuration){
     this.troupDetail = () =>{
         this.troupSummary();
         for (let i = 0; i < artistList.length; i++){
-            console.log(`\n
+            return `\n
             Artist number ${i+1} details listed below:\n
             ${artistList[0].musDetail()}`
-            )
+            
         }
         //return `--------Troop Intro-------\nHello this is the ${name} .\nThe minimum duration of this Troup is ${minDuration}, \nMy Genre is ${genre}, \n musician name is ${val}`;
     }
@@ -107,7 +104,7 @@ function Troup(name, minDuration){
 
 }
 
-function main(){
+function Stage(){
     var troupList = []
     var artistList = []
 
@@ -125,12 +122,13 @@ function main(){
     }
 */
 
+
     this.createMusician = () =>{
         console.log("Creating Musician \n")
         var name = prompt("Enter the name of the musicians: ");
         var yearsPlaying = prompt("Enter the musicians years of experience: ");
         var rate = prompt("Enter the musicians Hourly rate: ");
-        var instrument = prompt("Enter the musicians instrument: \n");
+        var instrument = prompt("Enter the musicians instrument: ");
         var musician = new Musician(name, yearsPlaying, rate);
         musician.setMusicianType(instrument);
         artistList.push(musician);
@@ -138,6 +136,8 @@ function main(){
        // console.log();
         //return this.mainMenu();
     }
+
+
 
     this.createTroup = () =>{
         console.log("Creating Troup\n")
@@ -149,6 +149,7 @@ function main(){
         troupList.push(troup);
        // return this.mainMenu();
     }
+
 
 
     this.addToTroup = (musName, troupName) =>{
@@ -166,6 +167,8 @@ function main(){
     }
 
 
+
+
     this.deployCost = (troupName, hours) =>{
         var troup = '';
         for (let i = 0; i < troupList.length; i++){
@@ -177,28 +180,50 @@ function main(){
     }
 
 
+
     this.troupSummary = () =>{
         for(let i = 0; i < troupList.length; i++){
             console.log(`${troupList[i].troupDetail()}\n`);
         }
     }
 
-    this.values = () =>{
-    console.log("length is: " + artistList.length)
+
+
+    this.logFileText = () => {
+        fs.readFile('file.txt', 'utf8' , (err, data) => {
+            if (err) {
+              console.error(err)
+              return
+            }
+            console.log(`Musician Names gotten from the file --> \n${data}`)
+          })
+    }
+
+
+
+    this.writeToFile = () =>{
+    console.log("Displaying the Troup details and writing their artist info to the output file");
+    
+    //troupList[0].troupDetail();
+    
+    for (let i = 0; i < troupList.length; i++){
+
+        let data = troupList[i].troupDetail();
+        data += '';
+        
+        fs.writeFile('Output.txt', data , (err) => { 
+
+            if (err) throw err; 
+        }) 
+    }
+    
+
     }
 }
 
 
 
 
-function readNames(){
-    fetch('/test.txt')
-    .then(response => response.text())
-    .then(data => {
-        // Do something with your data
-        console.log(data);
-    });
-}
 
 
 
@@ -210,39 +235,16 @@ function readNames(){
 
 
 
-// create a musician named John
-var John = new Musician('john', 10, 25);
-var Bob = new Musician('bob', 10, 25);
-var Craig = new Musician('craig', 10, 25);
-
-John.setMusicianType("Guitarist");
-Bob.setMusicianType("Drummer");
-Craig.setMusicianType("Guitarist")
-
-// Create a Rock Troup 
-var RockTroup = new Troup('First Troup', 30);
-
-//set the troup genre to rock
-RockTroup.setTroupGenre('rock');
-
-//Add a musician object to the troop
-RockTroup.addMusician(John);
-
-//calling Troup Say hello method 
-console.log(RockTroup.troupDetail());
-
-//cost of deploying the troup
-console.log(RockTroup.deployCost(3));
 
 
-
-var ma = new main();
+var ma = new Stage();
 ma.createMusician();
 ma.createTroup();
 ma.addToTroup('john', 'First');
 console.log('Troup Details listed below: \n');
 ma.troupSummary();
-console.log(readNames());
+ma.logFileText();
+ma.writeToFile();
 
 
 /*
