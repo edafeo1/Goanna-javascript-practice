@@ -15,7 +15,9 @@
   "devDependencies": {
     "jest": "^27.1.0"
   },
+
   "dependencies": {
     "file-system": "^2.2.2"
   }
+  
 }

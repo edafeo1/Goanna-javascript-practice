@@ -6,13 +6,15 @@ Fix the code in the code tab to pass this challenge (only syntax errors).
 
 let a = 3;
 
-
+// Specified type as number 
 function cubes(a) {
 	return a ** 3;
     //let cube = a * a * a;
     //return cube;
 }
 
+
+// compile to js means we write in language A OR B and the computer will see javascript 
 
 
 /*

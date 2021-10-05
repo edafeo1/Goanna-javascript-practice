@@ -231,7 +231,7 @@ function Stage(){
 
 
 
-
+/*
 var ma = new Stage();
 ma.createMusician();
 ma.createTroup();
