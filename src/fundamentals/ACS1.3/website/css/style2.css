@@ -1,45 +1,44 @@
-table{
-    background-color: rgb(234, 187, 236);
-    margin: auto;
-    border: 1px solid black;
+table {
+  background-color: rgb(234, 187, 236);
+  margin: auto;
+  border: 1px solid black;
 }
 
-th{
-    background-color: rgb(138, 43, 226);
-    color: black;
+th {
+  background-color: rgb(138, 43, 226);
+  color: black;
 }
 
-td{
-    text-align: center;
-    padding: 10px;
-    color: aliceblue;
+td {
+  text-align: center;
+  padding: 10px;
+  color: aliceblue;
 }
 
-ul{
-    list-style-type: square;
+ul {
+  list-style-type: square;
 }
 
-ol{
-    list-style-type: lower-alpha;
+ol {
+  list-style-type: lower-alpha;
 }
 
-a:link{
-    color: rgb(24, 3, 3);
-    text-decoration: none;
-
+a:link {
+  color: rgb(24, 3, 3);
+  text-decoration: none;
 }
 
-a:visited{
-    color: blue;
-    text-decoration: none;
+a:visited {
+  color: blue;
+  text-decoration: none;
 }
 
-a:hover{
-    color: pink;
-    text-decoration: none;
+a:hover {
+  color: pink;
+  text-decoration: none;
 }
 
-a:active{
-    color: red;
-    text-decoration: none;
+a:active {
+  color: red;
+  text-decoration: none;
 }
