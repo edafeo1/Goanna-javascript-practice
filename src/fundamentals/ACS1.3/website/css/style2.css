@@ -42,3 +42,12 @@ a:active {
   color: red;
   text-decoration: none;
 }
+
+.anchor {
+  margin-left: 100px;
+  padding: 10px;
+}
+
+.img1 {
+  margin-top: 50px;
+}
