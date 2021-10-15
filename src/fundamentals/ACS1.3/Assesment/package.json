@@ -1,0 +1,19 @@
+{
+  "name": "assesment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Musician.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "file-system": "^1.2.2",
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "jest": "^27.1.0"
+  }
+}

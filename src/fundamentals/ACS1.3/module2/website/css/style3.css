@@ -1,0 +1,39 @@
+#header {
+  background-color: #0000ff;
+  color: red;
+  width: 89%;
+  border: 1px solid black;
+  margin: auto;
+}
+
+#content {
+  background-color: #ff0000;
+  color: #408d21;
+  padding-right: 90px;
+}
+
+/* 
+class overides Id's
+
+#container {
+  background-color: #000000;
+  margin-top: 50px;
+  border: 1px solid black;
+  width: 960px;
+}
+
+.middle {
+  text-align: right;
+  background-color: #000000;
+  margin-top: 50px;
+  border: 1px solid black;
+}
+
+*/
+
+.middle {
+  text-align: right;
+  background-color: #000000;
+  margin-top: 50px;
+  border: 1px solid black;
+}
