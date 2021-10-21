@@ -201,5 +201,151 @@ h4 {
   border: 1px solid rgb(75, 72, 72);
   margin-bottom: 17px;
   outline: none;
-  
+}
+
+/* Extra  */
+
+.extra {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+/* Fixxxxxxxxx */
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.extra-col {
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.extra-col img {
+  width: 100%;
+}
+
+.layer {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transition: 0.5s;
+}
+.layer:hover {
+  background: rgba(226, 0, 0, 0.7);
+}
+.layer h3 {
+  width: 100%;
+  font-weight: 500;
+  color: #fff;
+  font-size: 26px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+.layer:hover h3 {
+  bottom: 49%;
+  opacity: 1;
+}
+
+/*  Services section  */
+
+.services {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.services-col {
+  flex-basis: 32%;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 5%;
+}
+
+.services-col img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.services-col p {
+  padding: 0%;
+}
+
+/*  TESTIMONIAL */
+
+.testimonial {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.testimonial-col {
+  flex-basis: 44%;
+  border-radius: 10px;
+  text-align: left;
+  background: #c0bdbc;
+  padding: 25px;
+  display: flex;
+  cursor: pointer;
+}
+
+/* get img and style this section */
+.testimonial-col img {
+  height: 60px;
+  width: 60px;
+  margin-left: 5px;
+  margin-right: 30px;
+  border-radius: 50%;
+}
+
+.testimonial-col p {
+  padding: 0;
+}
+
+.testimonial-col h3 {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.testimonial-col .fa {
+  color: #f44336;
+}
+
+/*   Footer   */
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.footer h4 {
+  margin-bottom: 25px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.icons .fa {
+  color: #0b2e5c;
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 18px 0;
+}
+
+.fa-heart {
+  color: #f44336;
 }
