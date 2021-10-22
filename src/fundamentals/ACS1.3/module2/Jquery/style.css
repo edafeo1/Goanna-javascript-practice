@@ -1,0 +1,17 @@
+p {
+  background: blueviolet;
+}
+
+img {
+  position: relative;
+  height: 100px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: rgb(149, 95, 199);
+  margin-top: 50px;
+  border-style: dashed;
+  border-color: rgb(83, 64, 100);
+}
